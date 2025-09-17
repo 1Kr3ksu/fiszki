@@ -1,0 +1,31 @@
+
+.flashcard{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    background-color: blueviolet;
+      width: 300px;
+  height: 200px;
+   margin: 20px auto;
+  perspective: 1000px;
+   box-shadow: 20px 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;  
+    
+    }
+    p{
+        margin-top: 40px;
+    }
+    .przycisk{
+        margin-top:60px;
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 15px;    
+    }
+    .przycisk:hover{
+background-color:greenyellow;
+
+    }
+    .przycisk:active{
+        transform: scale(0.95);
+    }

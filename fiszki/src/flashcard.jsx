@@ -1,14 +1,20 @@
 
-import './App.css'
+import { useState } from 'react'
+import './Flashcard.css'
 
-function Flashcard() {
+function Flashcard({question, answer}) {
+    const [isFlipped , setIsFlipped] = useState(false);
+
+    function handleFlip(){
+        setIsFlipped(!isFlipped)
+    }
 return(
     <div className='flashcard'>
-        <p>Data wybuchu 2 wojny światowej</p>
-        <p>1 września 1939</p>
-        <button>Odwróć kartę</button>
+        
+        {isFlipped ?  <p>{answer}✅</p> :  <p>{question}    </p> }
+        <button onClick={handleFlip} className='przycisk'>Odwróć kartę</button>
     </div>
 )
 }
 
-export default Flashcard
+export default Flashcard;
